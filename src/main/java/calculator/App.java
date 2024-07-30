@@ -40,23 +40,15 @@ public class App {
                 }
                 result = num1 / num2;
             }
-            /* 배열에 결과 값을 저장 후 count 를 증가시켜 다음 index로 넘어가기 위함 */
-//            intArrays[count]=result;
-//            count+=1;
-//            if (count >= 10){
-//                count=9;
-//                intArrays[count-1]
-//            }
-
             /*요구사항 6 연산결과가 10개를 초과하는 경우 새로운 결과 값이 하나씩 자리를 차지함  */
             if (count < 10){
                 intArrays[count]=result;
                 count+=1;
             } else {
                 for (int i=1; i<10; i++){
-                    intArrays[i-1]=intArrays[i];
+                    intArrays[i-1]=intArrays[i]; // 배열 한칸씩 앞으로
                 }
-                intArrays[9]=result;
+                intArrays[9]=result;  // 최근 result 값을 인덱스 9번자리 넣기
             }
             System.out.println("결과: " + result);
             System.out.println(Arrays.toString(intArrays));  // 확인차 배열 출력
