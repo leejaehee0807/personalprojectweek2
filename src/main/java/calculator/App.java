@@ -70,7 +70,15 @@ public class App {
                     results.remove(0);  // 요구사항 7 가장 먼저 저장된 결과 삭제
                 }
             }
-            System.out.println(Arrays.toString(results.toArray()));  // 확인차 리스트 출력
+            /*요구사항 8 : inquiry 입력시 저장된 모든 연산결과 조회*/
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력시 조회)");
+            String inquiry = sc.next();
+            if (inquiry.equals("inquiry")){
+                for (double result2 : results){
+                    System.out.println("저장된 연산 결과 전부 출력:"+result2);
+                }
+            }
+//            System.out.println(Arrays.toString(results.toArray()));  // 확인차 리스트 출력
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             question = sc.next();
         }
